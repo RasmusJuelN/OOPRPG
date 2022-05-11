@@ -23,6 +23,7 @@
 
             while (data.Party.Count < 4)
             {
+                character = new();
                 Console.WriteLine("Press 1 to roll attributes.");
                 while (Console.ReadKey(true).Key == ConsoleKey.D1)
                 {
@@ -66,9 +67,9 @@
                 if ((Console.ReadKey(true).Key == ConsoleKey.D4))
                 {
                     Console.WriteLine("Your Party so far:\n ");
-                    foreach (var items in data.Party)
+                    foreach (Characters characters in data.Party)
                     {
-                        Console.WriteLine($"Name: {character.Name}\nCharacter Type: {character.CharacterType}\n");
+                        Console.WriteLine($"Name: {characters.Name}\nCharacter Type: {characters.CharacterType}\n");
                     }
                 }
 
